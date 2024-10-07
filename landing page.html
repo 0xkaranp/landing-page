@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            padding: 50px 20px;
+        }
+        .text, .image {
+            flex: none;
+            width: 100%;
+        }
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    .container {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0px;
+        padding: 110px;
+    }
+    .text {
+        flex: 1;
+    }
+    .image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .image img {
+        max-height: 60vh;
+        width: auto;
+        object-fit: contain;
+    }
+    .paragraph {
+        text-align: center;
+        background-color: gray;
+        padding: 50px 20px;
+        color: black;
+        font-family: roboto;
+    }
+
+    .paragraph p {
+        margin-bottom: 20px;
+        font-size: clamp(14px, 2vw, 18px);
+        line-height: 1.5;
+    }
+
+    .paragraph h3 {
+        font-size: clamp(18px, 3vw, 24px);
+        word-spacing: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .paragraph {
+            padding: 30px 15px;
+        }
+
+        .paragraph h3 {
+            word-spacing: normal;
+        }
+    }
+    @media (max-width: 768px) {
+        .paragraph1 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .paragraph1 {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+    .paragraph1{
+      text-align: center;
+      background-color: white;
+      padding-top: 50px;
+      padding-bottom: 50px; 
+      color: black;
+      font-family: roboto;
+    }
+    .paragraph2 {
+      gap: 40px; /* Adds space between image and text */
+    }
+
+    @media (max-width: 768px) {
+      .paragraph2 {
+        gap: 20px; /* Reduces the gap on smaller screens */
+      }
+    }
+    .paragraph2{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px 20px;
+    }
+
+    .paragraph2 .text {
+      flex: 1;
+      text-align: left;
+      padding-right: 20px;
+    }
+
+    .paragraph2 .image {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .paragraph2 .image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .paragraph2 {
+        flex-direction: column;
+      }
+
+      .paragraph2 .text,
+      .paragraph2 .image {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+      }
+
+      .paragraph2 .image {
+        order: -1;
+        margin-bottom: 20px;
+      
+      }
+      .c{
+        color: gray;
+      }
+    }
+    .paragraph2 .image {
+      flex: 1;
+      display: flex;
+    }
+
+    .paragraph2 .text {
+      flex: 1;
+      text-align: left;
+      padding-right: 20px;
+    }
+
+    .paragraph2 .text h3 {
+      margin-left: 0;
+    }
+
+    @media (max-width: 768px) {
+      .paragraph2 .text {
+        text-align: left;
+        padding-right: 0;
+      }
+
+      .paragraph2 .image {
+        justify-content: center;
+      }
+      .paragraph3 {
+      gap: 40px; /* Adds space between image and text */
+    }
+
+    @media (max-width: 768px) {
+      .paragraph3 {
+        gap: 20px; /* Reduces the gap on smaller screens */
+      }
+    }
+    .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  img {
+    max-width: 25%;
+    max-height:15%;
+    float: left;
+  }
+  
+  .text {
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 20%;
+    float: left;
+  }
+  .container {
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+img {
+  max-width: 100%;
+  max-height:100%;
+}
+
+.text {
+  font-size: 20px;
+  padding-left: 20px;
+
+
+}
+}
+@media screen and (max-width: 768px) {
+  .paragraph14 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .p14 {
+    font-size: 14px;
+  }
+  
+  .p15 {
+    font-size: 20px;
+    padding: 8px 16px;
+  }
+  
+  .p16 {
+    font-size: 22px;
+  }
+  
+}
+
+@media screen and (max-width: 480px) {
+  .paragraph14 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .p14 {
+    font-size: 13px;
+  }
+  
+  .p15 {
+    font-size: 18px;
+    padding: 6px 12px;
+  }
+  
+  .p16 {
+    font-size: 20px;
+  }
+}
+
+.paragraph14{
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  padding-top: 50px;
+  padding-bottom: 50px; 
+  color: black;
+  font-family: roboto;
+}
+.p14{
+  font-size: 15px;
+  color: grey;
+}
+@media screen and (max-width: 1024px) {
+  .paragraph15, .paragraph16, .paragraph17 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .paragraph15 img, .paragraph16 img, .paragraph17 img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .paragraph15 p, .paragraph16 p, .paragraph17 p {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .paragraph15, .paragraph16, .paragraph17 {
+    padding: 20px 10px;
+  }
+
+  .paragraph15 img, .paragraph16 img, .paragraph17 img {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .paragraph15, .paragraph16, .paragraph17 {
+    padding: 15px 5px;
+  }
+
+  .paragraph15 img, .paragraph16 img, .paragraph17 img {
+    margin-bottom: 10px;
+  }
+
+  .paragraph15 p, .paragraph16 p, .paragraph17 p {
+    font-size: 14px;
+  }
+}
+
+
+.p15{
+  font-size: 25px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: grey;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+.p16{
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+}
+.image1 {
+  float: left;
+  width: 50%;
+  margin-bottom: 20px; /* Add space below .image1 */
+}
+
+@media screen and (max-width: 768px) {
+  .image1 {
+    width: 100%; /* Make image full width on smaller screens */
+    margin-bottom: 15px; /* Adjust space for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .image1 {
+    margin-bottom: 10px; /* Further adjust space for very small screens */
+  }
+}
+.paragraph15 {
+  margin-top: 20px; /* Add gap between image1 and paragraph15 */
+  gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .paragraph15 {
+    margin-top: 15px; /* Adjust gap for smaller screens */
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .paragraph15 {
+    margin-top: 10px; /* Further adjust gap for very small screens */
+    gap: 5px;
+  }
+}
+
+
+.image1{
+  float: left;
+  width: 50%;
+  
+  
+  
+}
+.paragraph15{
+    position:absolute;
+    width: 50%;
+    left: 25%;
+    gap: 20px;
+}
+
+
+
+.image2{
+  
+  width: 50%; 
+  float: right;
+  
+
+  
+  
+}
+.paragraph16{
+
+    
+    position:absolute;
+    width: 50%;
+    right: 25%;
+    gap: 20px;
+}
+.text5{
+  text-align: left;
+  padding-left: 350px; /* Adjust this value as needed */
+}
+      
+.image8{
+  gap: 20px;
+  float: left;
+  width: 50%;
+  
+  
+}
+
+.paragraph17{
+    padding-top: 70px;
+    position:absolute;
+    width: 50%;
+    left: 25%;
+    gap: 20px;
+}
+.baskar{
+  align-items: center;
+  background-color: grey;
+}
+.baskar{
+  text-align: center;
+
+}
+.card{
+  text-align: center;
+}
+.navbar-text{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: grey;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-text:hover {
+    background-color: #0056b3;
+}
+
+
+    </style>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Logo</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <span class="navbar-text>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Section link 1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Section link 2</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Section link 3</a>
+              </li>
+            </ul>
+        </span>
+            <span class="navbar-text">
+               Call to action
+            </span>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="text">
+            <h1>Crypto payment<br> infrastructure for <br>everyday usecases</h1>
+            <p>Seamless stable coin trasaction for today's digital economy</p>
+          </div>
+        <div class="image"">
+          <img src="https://i.pinimg.com/564x/59/32/29/593229739184504afd9507cc42a9cb86.jpg">
+        </div>
+      </div>
+      <div class="paragraph">
+          <p>Show a testimonial or which great companies are <br> already using your solution to get the results they <br>want!</p>
+          <h3>Webflow &nbsp; Webflow &nbsp; webflow &nbsp; Webflow &nbsp; </h3>
+      </div>
+      <div class="paragraph1">
+        <h3>table coin payment in the real world are hard</h3><br>
+        <h6>•Users do not have money on the same chain.</h6>
+        <h6>•Payments across chains are not instant.</h6>
+        <h6>•Off-ramp services charge quite a high fee.</h6>
+      </div>
+     
+        <div class="paragraph2">
+          <div class="image">
+            <img src="https://i.pinimg.com/564x/59/32/29/593229739184504afd9507cc42a9cb86.jpg">
+          </div>
+          <div class="text">
+            <h3>Making Making everyday crypto use<br>impractical for most people. </h3>
+            <p class="c">Making a simple payment can involve many steps and<br>understanding technicality</p>
+            <h6>•Sharing and verifying long wallet addresses.</h6>
+            <h6>•Handling cross-chain transfers and acquiring gas tokens</h6>
+            <h6>•Complex wallet interfaces with N tokens, N chains and waiting<br> for transactions to be confirmed</h6>
+          </div>
+        </div>
+        <div class="container">
+          <div class="image">
+            <img src="https://i.pinimg.com/564x/59/32/29/593229739184504afd9507cc42a9cb86.jpg">
+          </div>
+          <div class="text">
+            <h1>Paris is one of the most magnificient cities <br>in France.</h1>
+            <p>Your product is not the only solution they are considering so<br>
+               make sure they understand why your competitors are also not ideal.</p>
+             <h6>•Reason why this SUCKS!</h6>
+             <h6>•Reason why this SUCKS!</h6>
+             <h6>•Reason why this SUCKS!</h6>
+          </div>
+        </div>
+        <div>
+          <div  class="container">
+            <div class="image">
+              <img src="https://i.pinimg.com/564x/59/32/29/593229739184504afd9507cc42a9cb86.jpg">
+            </div>
+            <div class="text">
+              <h2>How much is this costing them?</h2>
+              <p>What’s the cost of not fixing their problem or getting the result they want?</p>
+              <h2>50%<br><h4>Quantify this as much<br>as possible!</h4>
+            </div>
+          </div>
+          <div class="paragraph14">
+            <h1>This Is How Your Product Can Fix All Of The Problems</h1>
+            <p class="p14">We don’t want to explain the entire product because that overwhelms people and <br>raises unnecessary 
+            objections, Instead, show them how they <br>can use your product to get the result they want
+            (this is all they care about anyway).</p>
+            <h5 class="p16">Only explain how they can get the result in 3-5 steps (or a short period of time)</h5>
+            <h4 class="p15">Explain your CTA here</h4>
+          </div>
+          <div class="paragraph15">
+               <div>
+                    <img class="image1" src="https://d38b044pevnwc9.cloudfront.net/cutout-nuxt/enhancer/2.jpg" alt="illustration">
+               </div>
+               <div class="text6">
+                  <h4>Step 1</h4>
+                  <h3>Explain How They Can Get The Result (In Order)</h3>
+                  <p>How does this step work? Why is this way of doing things better?</p>
+                  <h6>“What if  have a question about this?”</h6>
+                  <p>Make sure to answer it (if it’s an objection) otherwise some people might not convert.</p>
+               </div>
+          </div>
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+          <div class="paragraph16">
+            <img class="image2" src="https://d38b044pevnwc9.cloudfront.net/cutout-nuxt/enhancer/2.jpg" alt="illustration">
+          </div>
+          <div class="text5">
+            <h4>Step 2</h4>
+            <h3>Explain How They Can Get <br>The Result (In Order)</h3>
+            <p>How does this step work? Why is this way of doing <br> things better?</p>
+            <h6>“What if they have a question <br> about this?”</h6>
+          </div>
+
+          <div class="paragraph17">
+            <div>
+                 <img class="image8" src="https://d38b044pevnwc9.cloudfront.net/cutout-nuxt/enhancer/2.jpg" alt="illustration">
+            </div>
+            <div class="text7">
+               <h4>Step 1</h4>
+               <h3>Explain How They Can Get The Result (In Order)</h3>
+               <p>How does this step work? Why is this way of doing things better?</p>
+               <h6>“What if  have a question about this?”</h6>
+               <p>Make sure to answer it (if it’s an objection) otherwise some people might not convert.</p>
+            </div>
+  
+       <div class="baskar">
+               <div class="ayein">
+                <h2 align>This why 1000 of customers love<br>[product name]</h2>
+               <p>If you don’t have thousands of customers then replace that part. 
+               The point of this section is <br>to show your visitors that 
+               people like THEM are already getting the results they want.</p>
+              </div>
+             <div class="card" style="width: 18rem;">
+               <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+             <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+        </div>
+      
+      
+      
+      
+      
+      </div>
+    </div>
+  
+    
+</body>
+</html>
